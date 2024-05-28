@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="milaneso.css">
+    <style>
+        /* Puedes agregar estilos CSS aquí para mejorar el aspecto de tu formulario */
+    </style>
+</head>
+<body>
+
+    <h1>¿Que te parecio nuestra pagina?</h1>
+
+    <form id="registroForm" onsubmit="return validarFormulario()">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{10}" title="Ingresa un número de teléfono válido (10 dígitos).">
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required min="13" max="105">
+
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios" name="comentarios"></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        function validarFormulario() {
+            // Validar otros campos según sea necesario
+            var nombre = document.getElementById('nombre').value;
+            var telefono = document.getElementById('telefono').value;
+            var correo = document.getElementById('correo').value;
+            var edad = document.getElementById('edad').value;
+
+            // Ejemplo de validación simple para el nombre
+            if (nombre.trim() === '') {
+                alert('Por favor, ingresa tu nombre.');
+                return false;
+            }
+
+            // Puedes agregar más validaciones según tus requisitos
+
+            return true; // Si todas las validaciones son exitosas, el formulario se enviará
+        }
+    </script>
+
+</body>
+</html>

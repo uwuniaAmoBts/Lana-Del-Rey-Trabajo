@@ -1,0 +1,13 @@
+#carouselExample{
+    background-color: rgba(0, 0, 0, 0.555);
+}
+h1{
+    font: bold 36px val, verdana, sans-serif;
+}
+body{
+    background-image: url(img/vaso.jpg);
+}
+@font-face {
+    font-family: val;
+    src: url(Valentine.otf);
+}
